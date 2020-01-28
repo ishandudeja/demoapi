@@ -1,0 +1,12 @@
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\WebApiTodo.Service.dll
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\WebApiTodo.Service.pdb
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\WebApiTodo.Model.dll
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\EntityFramework.dll
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\WebApiTodo.Model.pdb
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\WebApiTodo.Model.dll.config
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\bin\Debug\EntityFramework.xml
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\obj\Debug\WebApiTodo.Service.csprojAssemblyReference.cache
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\obj\Debug\WebApiTodo.Service.csproj.CoreCompileInputs.cache
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\obj\Debug\WebApiTodo.Service.csproj.CopyComplete
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\obj\Debug\WebApiTodo.Service.dll
+c:\users\ishan\source\repos\WebApiTodo\WebApiTodo.Service\obj\Debug\WebApiTodo.Service.pdb

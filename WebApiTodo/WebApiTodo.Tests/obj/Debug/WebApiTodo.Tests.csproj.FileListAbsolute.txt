@@ -1,0 +1,2 @@
+C:\Users\ishan\source\repos\WebApiTodo\WebApiTodo.Tests\obj\Debug\WebApiTodo.Tests.csprojAssemblyReference.cache
+C:\Users\ishan\source\repos\WebApiTodo\WebApiTodo.Tests\obj\Debug\WebApiTodo.Tests.csproj.CoreCompileInputs.cache

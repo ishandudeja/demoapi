@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="todo_apiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TodoTask">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Task" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsComplete" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK__TodoTask__UserId__173876EA" FromRole="TodoTask" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TodoTasks" Relationship="Self.FK__TodoTask__UserId__173876EA" FromRole="Users" ToRole="TodoTask" />
+  </EntityType>
+  <Association Name="FK__TodoTask__UserId__173876EA">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="TodoTask" Type="Self.TodoTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TodoTask">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="todo_apiEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TodoTasks" EntityType="Self.TodoTask" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__TodoTask__UserId__173876EA" Association="Self.FK__TodoTask__UserId__173876EA">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TodoTask" EntitySet="TodoTasks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
